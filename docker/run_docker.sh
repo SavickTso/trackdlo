@@ -26,7 +26,7 @@ TRACK_ID=`docker ps -aqf "name=^/${CONTAINER_NAME}$"`
 if [ -z "${TRACK_ID}" ]; then
     echo "Creating new trackdlo docker container."
     xhost +local:root
-    docker run  -it --privileged --network=host -v ${HOST_DIR}:${CONTAINER_DIR}:rw -v /tmp/.X11-unix:/tmp/.X11-unix:rw --env="DISPLAY" --name=${CONTAINER_NAME} rmdlo-trackdlo:noetic bash
+    docker run  -it --privileged --network=host -v ${HOST_DIR}:${CONTAINER_DIR}:rw -v /tmp/.X11-unix:/tmp/.X11-unix:rw --env="DISPLAY" --name=${CONTAINER_NAME} rmdlo-trackdlo:librealsense bash
 else
     echo "Found trackdlo docker container: ${TRACK_ID}."
     # Check if the container is already running and start if necessary.
