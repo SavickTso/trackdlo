@@ -1,7 +1,7 @@
 {
     "device": {
         "fw version": "05.13.00.50",
-        "name": "Intel RealSense D435",
+        "name": "Intel RealSense D455",
         "product line": "D400"
     },
     "parameters": {
